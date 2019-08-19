@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <!--Game-->
+<div>
+  <table class="container">
+    {% for row in board %}
+      <tr>
+        {% for letter in row %}
+          <td>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+<!--High score (further study)-->
+<div id="stats">
+  <p id="timer">Time left: </p>
+  <p id="highscore">High score: </p> 
+  <p id="games-played">Games played: </p>
+  <p id="score">Score: 0</p>
+</div>
+<!--submit form-->
+<form>
+  <input type="text" name="guess" id="word-guess">
+  <button>Submit</button>
+</form>
+<!--message (if any)-->
+<div id="message">
+
+</div>
+
+<!--word list-->
+<ul id="word-list">
+
+</ul>
+{% endblock %}
